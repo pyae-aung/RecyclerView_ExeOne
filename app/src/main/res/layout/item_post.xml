@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileImageCardView"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="80dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+        </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jimmy"
+        app:layout_constraintLeft_toRightOf="@id/profileImageCardView"
+        app:layout_constraintTop_toTopOf="@id/profileImageCardView"/>
+
+        <TextView
+            android:id="@+id/txtPosted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posted"
+            app:layout_constraintLeft_toRightOf="@id/profileImageCardView"
+            app:layout_constraintTop_toBottomOf="@id/txtName"/>
+
+        <ImageView
+            android:id="@+id/iconClock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintRight_toLeftOf="@+id/txtHour"
+            app:layout_constraintTop_toTopOf="@id/txtHour"/>
+
+        <TextView
+            android:id="@+id/txtHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/txtPosted"/>
+
+        <ImageView
+            android:id="@+id/imgPosted"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/couple"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/profileImageCardView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtCommentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="98"
+            app:layout_constraintLeft_toRightOf="@id/imgComment"
+            app:layout_constraintBottom_toBottomOf="@id/imgLove"/>
+
+        <ImageView
+            android:id="@+id/imgLove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintTop_toBottomOf="@id/imgPosted"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtLoveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2k"
+            app:layout_constraintLeft_toRightOf="@id/imgLove"
+            app:layout_constraintBottom_toBottomOf="@id/imgLove"/>
+
+        <ImageView
+            android:id="@+id/imgComment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintBottom_toBottomOf="@id/imgLove"
+            app:layout_constraintLeft_toRightOf="@id/txtLoveCount"/>
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintLeft_toRightOf="@+id/txtCommentCount"
+            app:layout_constraintBottom_toBottomOf="@id/imgLove"/>
+
+        <TextView
+            android:id="@+id/txtShareCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500"
+            app:layout_constraintLeft_toRightOf="@+id/imgShare"
+            app:layout_constraintBottom_toBottomOf="@id/imgLove"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
